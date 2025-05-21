@@ -3,7 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LionPro - Professional Garage Door Installation & Repair | York Region & GTA</title>
+    <!-- Open Graph / Facebook / WhatsApp / Instagram -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="liongaragedoors.ca" />
+    <meta property="og:title" content="Garage Door Installation & Repair in the GTA" />
+    <meta property="og:description" content="Premium Garage Door Installation & Repair in the GTA" />
+    <meta property="og:image" content="https://yourwebsite.com/path-to-your-thumbnail.jpg" />
+
+    <!-- X (Twitter) Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://yourwebsite.com/" />
+    <meta name="twitter:title" content="Your Page Title Here" />
+    <meta name="twitter:description" content="A short, catchy description of your page or business." />
+    <meta name="twitter:image" content="https://yourwebsite.com/path-to-your-thumbnail.jpg" />
+
+    <title>Lion garage doors - Professional Garage Door Installation & Repair | York Region & GTA</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
     <style>
@@ -23,13 +37,35 @@
         .gallery-item img { transition: transform 0.5s; }
         .gallery-item:hover img { transform: scale(1.05); }
         @media print { .no-print { display:none; } }
+        #callUsButton {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background-color: #27ae60; /* Green color, change as needed */
+            color: white;
+            border-radius: 50%;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        #callUsButton:hover {
+            background: #219150;
+        }
     </style>
 </head>
 <body>
 <!-- Header -->
 <header class="bg-white shadow-sm">
-    <nav class="navbar container mx-auto px-4 py-4 flex justify-between items-center">
-        <div class="text-3xl font-bold text-primary"><span class="text-yellow-500">Lion</span>Pro</div>
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="text-3xl font-bold text-primary">
+            <span class="text-yellow-500">Lion</span>garagedoors.ca
+        </div>
         <div class="hidden md:flex space-x-8">
             <a href="#home" class="font-medium hover:text-yellow-500 transition">Home</a>
             <a href="#services" class="font-medium hover:text-yellow-500 transition">Services</a>
@@ -39,16 +75,41 @@
             <a href="#testimonials" class="font-medium hover:text-yellow-500 transition">Testimonials</a>
             <a href="#contact" class="font-medium hover:text-yellow-500 transition">Contact</a>
         </div>
-        <div class="md:hidden"><button class="text-gray-800"><i class="fas fa-bars text-xl"></i></button></div>
+        <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
     </nav>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+        <a href="#home" class="block py-2 font-medium hover:text-yellow-500 transition">Home</a>
+        <a href="#services" class="block py-2 font-medium hover:text-yellow-500 transition">Services</a>
+        <a href="#about" class="block py-2 font-medium hover:text-yellow-500 transition">About</a>
+        <a href="#areas" class="block py-2 font-medium hover:text-yellow-500 transition">Service Areas</a>
+        <a href="#gallery" class="block py-2 font-medium hover:text-yellow-500 transition">Gallery</a>
+        <a href="#testimonials" class="block py-2 font-medium hover:text-yellow-500 transition">Testimonials</a>
+        <a href="#contact" class="block py-2 font-medium hover:text-yellow-500 transition">Contact</a>
+    </div>
+    <script>
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
 </header>
+
+
+
 
 <!-- Hero Section -->
 <section id="home" class="bg-primary py-20">
     <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
         <div class="md:w-1/2 text-white mb-10 md:mb-0">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">Premium Garage Door Installation & Repair in the GTA</h1>
-            <p class="text-lg mb-8">Enhance curb appeal, security, and functionality with durable garage doors installed by LionPro’s experts.</p>
+            <p class="text-lg mb-8">Enhance curb appeal, security, and functionality with durable garage doors installed by liongaragedoors.ca’s experts.</p>
             <div class="flex space-x-4">
                 <a href="#contact" class="btn-primary">Request a Quote</a>
                 <a href="#services" class="bg-transparent border-2 border-white text-white py-3 px-6 rounded-md font-semibold hover:bg-white hover:text-primary transition">Our Services</a>
@@ -163,10 +224,10 @@
 <section id="about" class="py-16 bg-gray-50">
     <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
         <div class="md:w-1/2 md:pr-10 mb-10 md:mb-0">
-            <h2 class="text-3xl font-bold text-primary mb-4">About LionPro</h2>
-            <p class="text-gray-700 mb-4">With 15+ years serving York Region & GTA, LionPro delivers expert garage door installations, replacements, and repairs for residential & commercial clients.</p>
+            <h2 class="text-3xl font-bold text-primary mb-4">About lion garage doors</h2>
+            <p class="text-gray-700 mb-4">With 15+ years serving York Region & GTA, Lion Garage Doors delivers expert garage door installations, replacements, and repairs for residential & commercial clients.</p>
             <p class="text-gray-700 mb-4">Our trained technicians focus on precision, safety, and exceptional customer service, ensuring your garage door performs flawlessly.</p>
-            <p class="text-gray-700 mb-6">We know your garage door impacts security, energy efficiency, and home value. Trust LionPro for top-quality products and workmanship.</p>
+            <p class="text-gray-700 mb-6">We know your garage door impacts security, energy efficiency, and home value. Trust Lion Garage Doors for top-quality products and workmanship.</p>
             <div class="flex space-x-8">
                 <div class="flex items-center">
                     <i class="fas fa-users text-blue-600 text-xl mr-4"></i>
@@ -197,13 +258,13 @@
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
             <h2 class="text-3xl font-bold text-primary mb-4">Our Service Areas</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">LionPro proudly serves York Region and the Greater Toronto Area with exceptional window and door services.</p>
+            <p class="text-gray-600 max-w-2xl mx-auto">Lion Garage Doors proudly serves York Region and the Greater Toronto Area with exceptional garage door installation.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
             <!-- York Region -->
             <div class="card p-6 bg-white">
                 <h3 class="text-xl font-semibold mb-4 text-primary">York Region</h3>
-                <p class="text-gray-600 mb-4">We provide comprehensive window and door installation, replacement, and repair services throughout York Region, including:</p>
+                <p class="text-gray-600 mb-4">We provide comprehensive garage door installation, replacement, and repair services throughout York Region, including:</p>
                 <div class="grid grid-cols-2 gap-2">
                     <div class="flex items-center">
                         <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
@@ -304,7 +365,7 @@
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
             <h2 class="text-3xl font-bold text-primary mb-4">Our Project Gallery</h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">Browse through some of our recent window and door installation projects in York Region and the GTA.</p>
+            <p class="text-gray-600 max-w-2xl mx-auto">Browse through some of our recent garage door installation projects in York Region and the GTA.</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Gallery Item 1 -->
@@ -318,7 +379,7 @@
 
             <!-- Gallery Item 2 -->
             <div class="gallery-item">
-                <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/solid-white-garage-door.jpeg" alt="Bay window installation" class="w-full h-64 object-cover">
+                <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/solid-white-garage-door.jpeg" alt="garage door installation" class="w-full h-64 object-cover">
                 <div class="p-4 bg-white">
                     <h4 class="font-semibold">Non-Insulated Solid White Garage Door</h4>
                     <p class="text-gray-600 text-sm">Markham, ON</p>
@@ -336,7 +397,7 @@
 
             <!-- Gallery Item 4 -->
             <div class="gallery-item">
-                <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/insulated-white-garage-door.jpeg" alt="Casement windows installation" class="w-full h-64 object-cover">
+                <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/insulated-white-garage-door.jpeg" alt="garage door installation installation" class="w-full h-64 object-cover">
                 <div class="p-4 bg-white">
                     <h4 class="font-semibold">Premium white finish garage door</h4>
                     <p class="text-gray-600 text-sm">Toronto, ON</p>
@@ -354,7 +415,7 @@
 
             <!-- Gallery Item 6 -->
             <div class="gallery-item">
-                <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/modern-garage-door-two.jpeg" alt="Heritage home window replacement" class="w-full h-64 object-cover">
+                <img src="https://cdn.jsdelivr.net/gh/GidiGov/lionprogragedoors@main/modern-garage-door-two.jpeg" alt="garage door installation" class="w-full h-64 object-cover">
                 <div class="p-4 bg-white">
                     <h4 class="font-semibold">Modern garage door</h4>
                     <p class="text-gray-600 text-sm">Aurora, ON</p>
@@ -383,7 +444,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                 </div>
-                <p class="text-gray-700 mb-4">"LionPro replaced all the windows in our home and did an exceptional job. Their team was professional, efficient, and left our home spotless. The new windows look fantastic and have already made a noticeable difference in our energy bills. Highly recommend!"</p>
+                <p class="text-gray-700 mb-4">"Lion Garage Doors replaced all the garage door in our home and did an exceptional job. Their team was professional, efficient, and left our home spotless. The new garage door installation looks fantastic and have already made a noticeable difference in our energy bills. Highly recommend!"</p>
                 <div class="flex items-center">
                     <div class="mr-4">
                         <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
@@ -408,7 +469,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                 </div>
-                <p class="text-gray-700 mb-4">"We needed a new front door and couldn't be happier with LionPro's service. From the initial consultation to the installation, everything was done with utmost professionalism. The installer took great care with our home and the finished result is beautiful. Thank you!"</p>
+                <p class="text-gray-700 mb-4">"We needed a new front door and couldn't be happier with Lion Garage Doors's service. From the initial consultation to the installation, everything was done with utmost professionalism. The installer took great care with our home and the finished result is beautiful. Thank you!"</p>
                 <div class="flex items-center">
                     <div class="mr-4">
                         <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
@@ -433,7 +494,7 @@
                         <i class="fas fa-star-half-alt"></i>
                     </div>
                 </div>
-                <p class="text-gray-700 mb-4">"When our basement window needed emergency repair after a storm, LionPro responded quickly and professionally. They fixed the issue and even advised us on improving the surrounding drainage to prevent future problems. Great service at a fair price."</p>
+                <p class="text-gray-700 mb-4">"When our basement entrance needed emergency garage door installation repair after a storm, Lion Garage Doors responded quickly and professionally. They fixed the issue and even advised us on improving the surrounding drainage to prevent future problems. Great service at a fair price."</p>
                 <div class="flex items-center">
                     <div class="mr-4">
                         <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
@@ -458,7 +519,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                 </div>
-                <p class="text-gray-700 mb-4">"We recently had LionPro install new patio doors and couldn't be more pleased with the results. Their attention to detail and craftsmanship are exceptional. The installers were courteous, clean, and completed the job on schedule. Our new doors look fantastic!"</p>
+                <p class="text-gray-700 mb-4">"We recently had Lion Garage Doors install new patio doors and couldn't be more pleased with the results. Their attention to detail and craftsmanship are exceptional. The installers were courteous, clean, and completed the job on schedule. Our new doors look fantastic!"</p>
                 <div class="flex items-center">
                     <div class="mr-4">
                         <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
@@ -483,7 +544,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                 </div>
-                <p class="text-gray-700 mb-4">"As a contractor, I've worked with many window companies, and LionPro stands out for their quality and reliability. They've been my go-to for client projects for years. Their products are excellent, pricing is competitive, and they always meet deadlines. Highly recommended!"</p>
+                <p class="text-gray-700 mb-4">"As a contractor, I've worked with many garage door installation companies, and Lion Garage Doors stands out for their quality and reliability. They've been my go-to for client projects for years. Their products are excellent, pricing is competitive, and they always meet deadlines. Highly recommended!"</p>
                 <div class="flex items-center">
                     <div class="mr-4">
                         <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
@@ -508,7 +569,7 @@
                         <i class="fas fa-star"></i>
                     </div>
                 </div>
-                <p class="text-gray-700 mb-4">"We had LionPro replace all the windows in our century home, and they did an amazing job matching the historical style while providing modern energy efficiency. Their expertise with heritage properties was invaluable, and the results exceeded our expectations."</p>
+                <p class="text-gray-700 mb-4">"We had Lion Garage Doors replace all the garage door installations in our century home, and they did an amazing job matching the historical style while providing modern energy efficiency. Their expertise with heritage properties was invaluable, and the results exceeded our expectations."</p>
                 <div class="flex items-center">
                     <div class="mr-4">
                         <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
@@ -529,7 +590,7 @@
 <section class="py-16 bg-primary">
     <div class="container mx-auto px-4 text-center">
         <h2 class="text-3xl font-bold text-white mb-4">Ready to Transform Your Home?</h2>
-        <p class="text-white text-lg mb-8 max-w-2xl mx-auto">Contact us today for a free consultation and estimate on your window and door project. Experience the LionPro difference!</p>
+        <p class="text-white text-lg mb-8 max-w-2xl mx-auto">Contact us today for a free consultation and estimate on your garage door installation project. Experience the Lion Garage Doors difference!</p>
         <a href="#contact" class="bg-white text-primary px-8 py-3 rounded-md font-semibold hover:bg-yellow-500 hover:text-white transition">Get a Free Quote</a>
     </div>
 </section>
@@ -567,10 +628,8 @@
                         <label for="service" class="block text-gray-700 mb-2">Service Interested In</label>
                         <select id="service" name="service" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                             <option value="">Select a service</option>
-                            <option value="window_installation">Window Installation</option>
-                            <option value="door_installation">Door Installation</option>
-                            <option value="window_repair">Window Repair</option>
-                            <option value="door_repair">Door Repair</option>
+                            <option value="installation">Garage door installation</option>
+                            <option value="repair">Garage door Repair</option>
                             <option value="energy_upgrade">Energy Efficiency Upgrade</option>
                             <option value="consultation">Consultation</option>
                             <option value="other">Other</option>
@@ -593,7 +652,7 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold">Address</h4>
-                                <p class="text-gray-600">123 Main Street, Unit 10<br>Richmond Hill, ON L4B 3P4</p>
+                                <p class="text-gray-600">123 Main Street, Unit 10<br>Newmarket, ON L3Y 3Y7</p>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -602,7 +661,7 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold">Phone</h4>
-                                <p class="text-gray-600">(905) 123-4567</p>
+                                <p class="text-gray-600">+1 (437) 970-4831</p>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -611,7 +670,7 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold">Email</h4>
-                                <p class="text-gray-600">info@lionpro.ca</p>
+                                <p class="text-gray-600">info@liongaragedoors.ca</p>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -620,7 +679,7 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold">Business Hours</h4>
-                                <p class="text-gray-600">Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                                <p class="text-gray-600">Monday - Friday: 8:00 AM - 8:00 PM<br>Saturday: 9:00 AM - 4:00 PM<br>Sunday: 9:00 AM - 4:00</p>
                             </div>
                         </div>
                     </div>
@@ -645,7 +704,8 @@
                 <div class="bg-white rounded-lg shadow-md p-8">
                     <h3 class="text-xl font-semibold mb-6">Service Area</h3>
                     <div class="rounded-lg overflow-hidden" style="height: 300px; background-color: #f0f0f0;">
-                        <!-- Map placeholder - In a real implementation, embed an actual map here -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d366799.1880860103!2d-79.79543240698068!3d44.09122514385935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882acdaee4d2a679%3A0x108dcfb46a288a64!2sRegional%20Municipality%20of%20York%2C%20ON!5e0!3m2!1sen!2sca!4v1746888653910!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
                         <div class="w-full h-full flex items-center justify-center">
                             <p class="text-gray-600">Map of York Region & GTA Service Areas</p>
                         </div>
@@ -661,8 +721,8 @@
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-                <h3 class="text-2xl font-bold mb-4"><span class="text-yellow-500">Lion</span>Pro</h3>
-                <p class="mb-4">Professional window and door installation services in York Region and the Greater Toronto Area.</p>
+                <h3 class="text-2xl font-bold mb-4"><span class="text-yellow-500">Lion</span>garagedoors.ca</h3>
+                <p class="mb-4">Professional garage door installation services in York Region and the Greater Toronto Area.</p>
                 <div class="flex space-x-4">
                     <a href="#" class="text-gray-400 hover:text-white transition">
                         <i class="fab fa-facebook-f"></i>
@@ -692,10 +752,8 @@
             <div>
                 <h4 class="text-lg font-semibold mb-4">Services</h4>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">Window Installation</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition">Garage door installation</a></li>
                     <li><a href="#" class="text-gray-400 hover:text-white transition">Door Installation</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">Window Repair</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition">Door Repair</a></li>
                     <li><a href="#" class="text-gray-400 hover:text-white transition">Energy Efficiency Upgrades</a></li>
                     <li><a href="#" class="text-gray-400 hover:text-white transition">Free Consultations</a></li>
                 </ul>
@@ -709,11 +767,11 @@
                     </li>
                     <li class="flex items-center">
                         <i class="fas fa-phone mr-2"></i>
-                        <span>(905) 123-4567</span>
+                        <span>+1 (437) 970-4831</span>
                     </li>
                     <li class="flex items-center">
                         <i class="fas fa-envelope mr-2"></i>
-                        <span>info@lionpro.ca</span>
+                        <span>info@liongaragedoors.ca</span>
                     </li>
                     <li class="flex items-center">
                         <i class="fas fa-clock mr-2"></i>
@@ -723,10 +781,16 @@
             </div>
         </div>
         <div class="mt-12 pt-8 border-t border-gray-800 text-center">
-            <p>&copy; 2023 LionPro Windows & Doors. All rights reserved.</p>
+            <p>&copy; 2023 liongaragedoors.ca garage door installation. All rights reserved.</p>
         </div>
     </div>
 </footer>
+
+<!-- Floating Call Us Button -->
+<a href="tel:4379704831" id="callUsButton" title="Call Us">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="28" height="28" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.05 11.05 0 003.48.56 1 1 0 011 1v3.54a1 1 0 01-.91 1A19.91 19.91 0 013 4.92 1 1 0 014 4h3.54a1 1 0 011 1 11.05 11.05 0 00.56 3.48 1 1 0 01-.21 1.11l-2.2 2.2z"/></svg>
+</a>
+
 
 <script>
     // Sticky navigation
